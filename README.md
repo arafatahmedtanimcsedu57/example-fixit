@@ -1,8 +1,10 @@
-# React SDD Starter
+# reading-list
 
-A React template where **you decide and Claude builds**. You describe a feature, edit its
-design in Claude Design, and approve the plan; Claude Code writes the code and tests, then
-opens a PR. You review it and merge.
+A personal list of books I want to read, with status tracking.
+
+Built from the React SDD starter: **you decide and Claude builds**. You describe a feature,
+edit its design in Claude Design, and approve the plan; Claude Code writes the code and
+tests, then opens a PR. You review it and merge.
 
 **Stack:** Vite · React 19 · TypeScript (strict) · React Router 7 · RTK Query · Zustand ·
 React Hook Form + Zod · Tailwind 4 · MSW · Vitest · Playwright · OpenSpec.
@@ -139,17 +141,16 @@ same checks.
 
 ## 8. Project map
 
-| Path                  | What it is                                                             |
-| --------------------- | ---------------------------------------------------------------------- |
-| `features.md`         | **You own it.** What the app does, in plain words                      |
-| `architecture.md`     | **You own it.** Tech decisions, API sources, design links              |
-| `CLAUDE.md`           | The rules Claude follows every session                                 |
-| `PIPELINE.md`         | The full playbook: phases, gates, who does what                        |
-| `openspec/`           | Specs: `changes/` in progress, `specs/` shipped                        |
-| `design/`             | Copy of the design as last built (written by `/build`, `/sync-ui`)     |
-| `.claude/`            | Commands, skills, reviewer agents, self-checking hooks, permissions    |
-| `.github/`            | CI, PR size check, `@claude` bot, autopilot, CODEOWNERS, Dependabot    |
-| `src/features/items/` | Worked example: API + Zod + form + mocks + tests (removed by `/start`) |
+| Path              | What it is                                                          |
+| ----------------- | ------------------------------------------------------------------- |
+| `features.md`     | **You own it.** What the app does, in plain words                   |
+| `architecture.md` | **You own it.** Tech decisions, API sources, design links           |
+| `CLAUDE.md`       | The rules Claude follows every session                              |
+| `PIPELINE.md`     | The full playbook: phases, gates, who does what                     |
+| `openspec/`       | Specs: `changes/` in progress, `specs/` shipped                     |
+| `design/`         | Copy of the design as last built (written by `/build`, `/sync-ui`)  |
+| `.claude/`        | Commands, skills, reviewer agents, self-checking hooks, permissions |
+| `.github/`        | CI, PR size check, `@claude` bot, autopilot, CODEOWNERS, Dependabot |
 
 ## Troubleshooting
 

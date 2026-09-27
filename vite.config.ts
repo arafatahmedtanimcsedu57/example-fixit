@@ -1,3 +1,4 @@
+import { fileURLToPath, URL } from 'node:url'
 import { gzipSync } from 'node:zlib'
 import { defineConfig, loadEnv, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -30,6 +31,7 @@ export default defineConfig(({ mode }) => {
   const { API_PROXY_TARGET } = loadEnv(mode, process.cwd(), '')
   return {
     plugins: [react(), tailwindcss(), bundleBudget()],
+    resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
     server: API_PROXY_TARGET
       ? { proxy: { '/api': { target: API_PROXY_TARGET, changeOrigin: true } } }
       : undefined,

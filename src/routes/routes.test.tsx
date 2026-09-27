@@ -5,9 +5,9 @@ import { RootLayout } from './RootLayout'
 import { RouteError } from './RouteError'
 
 describe('routes', () => {
-  it('renders the items page at /', async () => {
+  it('renders the home page at /', async () => {
     renderRoute('/')
-    expect(await screen.findByRole('heading', { name: /items/i })).toBeInTheDocument()
+    expect(await screen.findByRole('heading', { name: /reading-list/i })).toBeInTheDocument()
   })
 
   it('shows "Page not found" for an unknown URL', async () => {
